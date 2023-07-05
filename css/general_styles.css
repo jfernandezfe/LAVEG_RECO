@@ -129,7 +129,7 @@ to {
     background-color: #ffffffb0;
     width: 300px;
     padding: 20px;
-    border: 1px solid #000000;
+    border: 3px solid #000000cc;
     text-align: center;
     animation: fading 2s ease-in-out;
 }
