@@ -66,7 +66,7 @@ html, body, #map {
 
 header {
     height: 25px; /* Ajusta el valor según tus necesidades */
-    background-color: forestgreen;
+    background-color: rgb(34, 139, 34);
     padding-top: 5px; /* Ajusta el valor según tus necesidades */
     padding-bottom: 0px; /* Ajusta el valor según tus necesidades */
     margin-top: 0px; /* Ajusta el valor según tus necesidades */
@@ -74,6 +74,8 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
+    
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.555);
 }
 
 header h3{
@@ -83,15 +85,73 @@ header h3{
 
 .text-animation {
     position: relative;
-    animation: slideIn 6s forwards;
+    animation: fading 8s ease-in-out;
+}
+
+@keyframes fading {
+    0% {
+      opacity: 0;
+      filter: blur(10px);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+}
+
+@keyframes fading-out {
+    0% {
+      opacity: 1;
+      filter: blur(10px)
+    }
+    100% {
+      opacity: 0;
+      filter: blur(0);
+    }
 }
   
-@keyframes slideIn {
+/* @keyframes slideIn {
 from {
     left: -100%;
 }
 to {
     left: 0;
 }
+} */
+
+/* Creando una ventana emergente con mensjae para el usuario...*/
+.popup, .welcome-popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffffb0;
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #000000;
+    text-align: center;
+    animation: fading 2s ease-in-out;
 }
 
+
+.popup p, .welcome-popup p {
+    margin-bottom: 20px;
+}
+
+.popup button.accept-button, .welcome-popup button.accept-button {
+    padding: 10px 20px;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+}
+
+.popup button.skip-button {
+    padding: 10px 20px;
+    background-color: #cccccc;
+    color: #000000;
+    border: none;
+    cursor: pointer;
+}
+  
