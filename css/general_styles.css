@@ -131,13 +131,15 @@ to {
     padding: 20px;
     border: 3px solid #000000cc;
     text-align: center;
-    animation: fading 2s ease-in-out;
+    animation: fading 1s ease-in-out;
+    box-shadow: 0 8px 10px rgba(0, 0, 0, 0.781); /* Agrega el efecto de sombra */
 }
 
 
 .popup p, .welcome-popup p {
     margin-bottom: 20px;
 }
+
 
 .popup button.accept-button, .welcome-popup button.accept-button {
     padding: 10px 20px;
